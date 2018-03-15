@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ply-zX-wgB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeviceManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oku-vE-uVh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="jFr-cg-GCK">
+                            <color key="tintColor" red="1" green="0.044531076554543136" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onClickDismiss:" destination="BYZ-38-t0r" id="SpF-kf-oFE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3628" y="1225.6371814092954"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CLw-k6-gDF">
+            <objects>
+                <viewController id="2QX-iA-eki" customClass="DBViewController" customModule="DeviceManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46W-1w-byu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxn-2G-c3J">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3aa-jU-UCD"/>
+                                </constraints>
+                                <state key="normal" title="Insert"/>
+                                <connections>
+                                    <action selector="insertIten:" destination="2QX-iA-eki" eventType="touchUpInside" id="Gza-NH-hab"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qxn-2G-c3J" firstAttribute="leading" secondItem="Dva-mj-oDm" secondAttribute="leading" constant="16" id="LjL-vQ-Wdr"/>
+                            <constraint firstItem="qxn-2G-c3J" firstAttribute="top" secondItem="Dva-mj-oDm" secondAttribute="top" constant="16" id="buR-WB-xyh"/>
+                            <constraint firstItem="Dva-mj-oDm" firstAttribute="trailing" secondItem="qxn-2G-c3J" secondAttribute="trailing" constant="16" id="kHl-eP-xMi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dva-mj-oDm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZB-ok-huW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="-160"/>
+        </scene>
+        <!--iOS Devices-->
+        <scene sceneID="WOP-hV-67x">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7gl-jY-FuB" customClass="iOSDevice" customModule="DeviceManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4P1-Lt-jrK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NJ9-sj-xnm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NJ9-sj-xnm" firstAttribute="bottom" secondItem="cIn-3M-SLG" secondAttribute="bottom" id="0vj-Ul-NEw"/>
+                            <constraint firstItem="NJ9-sj-xnm" firstAttribute="top" secondItem="cIn-3M-SLG" secondAttribute="top" id="1NI-r0-Rm3"/>
+                            <constraint firstItem="NJ9-sj-xnm" firstAttribute="trailing" secondItem="cIn-3M-SLG" secondAttribute="trailing" id="Y0r-Hg-1vh"/>
+                            <constraint firstItem="NJ9-sj-xnm" firstAttribute="leading" secondItem="cIn-3M-SLG" secondAttribute="leading" id="gaF-8C-WjZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cIn-3M-SLG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS Devices" id="iUm-XJ-Q1b">
+                        <barButtonItem key="leftBarButtonItem" image="scan" id="E54-FI-xpd">
+                            <connections>
+                                <action selector="onClickScanButton:" destination="7gl-jY-FuB" id="yZM-8X-Us3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AoT-sG-qD6">
+                            <connections>
+                                <action selector="onClickAdd:" destination="7gl-jY-FuB" id="nV1-g9-hA9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="NJ9-sj-xnm" id="yeC-VX-IVb"/>
+                        <segue destination="zC3-Y1-2hO" kind="presentation" identifier="scanSegue" id="MMA-7X-woV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Tp-OD-d7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="1225.6371814092954"/>
+        </scene>
+        <!--Android Devices-->
+        <scene sceneID="Kpm-kQ-NmP">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GWd-cl-Iy2" customClass="AndroidDevice" customModule="DeviceManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8fH-T3-QAW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xto-h5-Tia">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xto-h5-Tia" firstAttribute="top" secondItem="BUE-C1-V0g" secondAttribute="top" id="G5w-kG-6Oi"/>
+                            <constraint firstItem="xto-h5-Tia" firstAttribute="bottom" secondItem="BUE-C1-V0g" secondAttribute="bottom" id="JEa-DB-q0M"/>
+                            <constraint firstItem="xto-h5-Tia" firstAttribute="leading" secondItem="BUE-C1-V0g" secondAttribute="leading" id="qBL-bB-8ry"/>
+                            <constraint firstItem="xto-h5-Tia" firstAttribute="trailing" secondItem="BUE-C1-V0g" secondAttribute="trailing" id="uEv-lM-ov8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BUE-C1-V0g"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Android Devices" id="4kE-Ig-g0Y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="V7I-Mu-E7i">
+                            <connections>
+                                <action selector="onClickAdd:" destination="GWd-cl-Iy2" id="85s-sz-8jw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xto-h5-Tia" id="E3K-Yk-rJU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhP-aX-wTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="1921.8890554722641"/>
+        </scene>
+        <!--iOS Cables-->
+        <scene sceneID="myd-lK-fYO">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="B2O-UW-Nj7" customClass="iOSCable" customModule="DeviceManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bA0-xJ-uHw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vD2-B8-bTu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vD2-B8-bTu" firstAttribute="trailing" secondItem="xSi-ug-bZP" secondAttribute="trailing" id="9fi-UE-7Qq"/>
+                            <constraint firstItem="vD2-B8-bTu" firstAttribute="leading" secondItem="xSi-ug-bZP" secondAttribute="leading" id="Aus-SB-Drt"/>
+                            <constraint firstItem="vD2-B8-bTu" firstAttribute="bottom" secondItem="xSi-ug-bZP" secondAttribute="bottom" id="KtK-bc-Xb8"/>
+                            <constraint firstItem="vD2-B8-bTu" firstAttribute="top" secondItem="xSi-ug-bZP" secondAttribute="top" id="nkZ-Gj-j1g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xSi-ug-bZP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS Cables" id="eDN-y5-wB5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y9W-Jx-AWV">
+                            <connections>
+                                <action selector="onClikcAdd:" destination="B2O-UW-Nj7" id="419-uh-Ifk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="vD2-B8-bTu" id="Kgd-lr-lSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogf-Px-BxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="2638.8305847076463"/>
+        </scene>
+        <!--Android Cables-->
+        <scene sceneID="eA4-w4-Z3u">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cOc-7E-5Wh" customClass="AndroidCable" customModule="DeviceManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LZs-eL-voY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bHj-hR-M0Y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bHj-hR-M0Y" firstAttribute="top" secondItem="RxN-pK-zRc" secondAttribute="top" id="2Hv-i7-qiA"/>
+                            <constraint firstItem="bHj-hR-M0Y" firstAttribute="bottom" secondItem="RxN-pK-zRc" secondAttribute="bottom" id="Spg-Ck-Xwk"/>
+                            <constraint firstItem="bHj-hR-M0Y" firstAttribute="leading" secondItem="RxN-pK-zRc" secondAttribute="leading" id="XIU-e3-oLa"/>
+                            <constraint firstItem="bHj-hR-M0Y" firstAttribute="trailing" secondItem="RxN-pK-zRc" secondAttribute="trailing" id="exn-7r-0F8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RxN-pK-zRc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Android Cables" id="dhD-sa-3he">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2sc-GZ-MN5">
+                            <connections>
+                                <action selector="onClickAdd:" destination="cOc-7E-5Wh" id="wz3-If-3XC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="bHj-hR-M0Y" id="lUd-Zy-Yim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovz-BN-5Wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="3380.9595202398805"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mbR-TG-e6j">
+            <objects>
+                <tabBarController id="Ply-zX-wgB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZtB-Ms-5Z9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5Am-4a-Avm" kind="relationship" relationship="viewControllers" id="PAh-vr-KYo"/>
+                        <segue destination="tCV-83-7fo" kind="relationship" relationship="viewControllers" id="OpY-2X-Dyn"/>
+                        <segue destination="veH-Yo-qfn" kind="relationship" relationship="viewControllers" id="1Ke-YV-z7f"/>
+                        <segue destination="sDS-CD-4Gg" kind="relationship" relationship="viewControllers" id="GXH-PP-Jfa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dC0-wO-QFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="1556"/>
+        </scene>
+        <!--iOS-->
+        <scene sceneID="wG1-Oc-QOS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Am-4a-Avm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="iOS" image="iOS" id="T2s-kl-S9p">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cZ3-Vk-aR1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7gl-jY-FuB" kind="relationship" relationship="rootViewController" id="gXe-GH-oEr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avD-72-5qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="1226"/>
+        </scene>
+        <!--Android-->
+        <scene sceneID="eGO-aN-K7n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tCV-83-7fo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Android" image="android" id="fpb-uK-pTV">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ypf-x2-jW9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GWd-cl-Iy2" kind="relationship" relationship="rootViewController" id="d2t-7C-Zgx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrE-HG-z76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="1922"/>
+        </scene>
+        <!--iOS Cables-->
+        <scene sceneID="xUN-t0-ixt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="veH-Yo-qfn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="iOS Cables" image="cable" id="CeY-59-LPE">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JsU-OZ-R1v">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B2O-UW-Nj7" kind="relationship" relationship="rootViewController" id="mUB-HD-zux"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruE-Ff-yt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="2639"/>
+        </scene>
+        <!--Android Cables-->
+        <scene sceneID="mpy-cH-scc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sDS-CD-4Gg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Android Cables" image="cable" id="0GW-6U-y85">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M3v-16-IpW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cOc-7E-5Wh" kind="relationship" relationship="rootViewController" id="3nM-MJ-puQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzj-eg-f7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="3381"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iBD-Hc-1J3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zC3-Y1-2hO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G2P-rI-NjW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8GN-Hb-kHu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ze-Xr-aIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2816" y="1225.1874062968516"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="android" width="21" height="21"/>
+        <image name="cable" width="21" height="21"/>
+        <image name="iOS" width="21" height="21"/>
+        <image name="scan" width="32" height="32"/>
+    </resources>
+</document>
